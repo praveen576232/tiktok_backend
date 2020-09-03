@@ -22,7 +22,7 @@ app.get('/v1/video/get',(req,res)=>{
         res.status(500).send(err)
     })
 })
-app.post('/v1/video/poast',(req,res)=>{
+app.get('/v1/video/poast',(req,res)=>{
     schema.find().exec().then(data =>{
         res.send(data)
     })
