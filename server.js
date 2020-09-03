@@ -9,7 +9,8 @@ mongoose.connect('mongodb+srv://praveend:praveend123@tiktokclone.halcg.mongodb.n
 
 app.use((req,res,next)=>{
 res.setHeader("Access-Control-Allow-Origin","*");
-res.setHeader("Access-Control-Allow-Headers","*")
+res.setHeader("Access-Control-Allow-Headers","*");
+next();
 })
 
 app.get('/v1/video/get',(req,res)=>{
