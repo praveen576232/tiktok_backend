@@ -1,10 +1,11 @@
 const express = require('express');
 const schema = require('./Database/database')
 const app = new express();
+require('dotenv').config()
 const mongoose = require('mongoose')
 app.use(express.json());
 const port =process.env.PORT || 9090;
-mongoose.connect('mongodb+srv://praveend:praveend123@tiktokclone.halcg.mongodb.net/tiktokdatabase?retryWrites=true&w=majority',{useNewUrlParser:true})
+mongoose.connect(process.env.DATBASE_CONNECTION,{useNewUrlParser:true})
 
 
 app.use((req,res,next)=>{
